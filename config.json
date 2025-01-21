@@ -1,5 +1,6 @@
 {
     "user": "mail or username", 
-    "password": "password"
+    "password": "password",
+    "text": "text to user"
 }
 
