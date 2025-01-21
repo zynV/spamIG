@@ -18,19 +18,6 @@ text = config['text']
 with open('person_list.txt', 'r', encoding='utf-8') as person_file:  # Прописать удаление использованных никнеймов
     person_list = [line.strip() for line in person_file.readlines()]
 
-# user = "george_spamowich12"
-# password = "11!Admin"
-# text = (
-#     "Добрий день!\n\n"
-#     "Мене звати Богдан, і я представляю ліцензійне казино України.\n\n"
-#     "Ми пропонуємо вам співпрацю та надаємо : 60$ за одного ліда !\n\n"
-#     "Лід – це користувач, який реєструється та вносить мінімальний депозит.\n\n" 
-#     "Надсилайте вашу статистику та обговоримо детальніше."
-# )
-# person_list = [
-#     "gr1bson",
-# ]
-
 def start_selenium():
     PATH = "C:\\drivers\\chromedriver.exe"
     service = Service(executable_path=PATH)
@@ -138,8 +125,8 @@ def send_message(driver, person, message):
     except Exception as e:
 
         with open('mes_error.txt', 'a', encoding='utf-8') as error_file:
-            error_file.write(f"Помилка 1: {person}\n")
-        print(f"Інша помилка: {person}: {e}")
+            error_file.write(f"error 1: {person}\n")
+        print(f"unknown error: {person}: {e}")
 
     time.sleep(5)
 
